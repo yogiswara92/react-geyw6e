@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
 import axios from 'axios';
-
+import List from "./List";
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [posts, setPosts] = useState([]);
 
   // Async (Promise)
   // Sync (Ga Promise)
-
 
   // const fetchVersi1 = () => {
   //   // Promise
@@ -46,7 +45,9 @@ export default function App() {
 
     const res = await axios.get(url);
 
-    console.log('modern', res.data);
+    setPosts(res.data);
+
+    console.log(res.data);
   };
 
   useEffect(() => {
@@ -56,18 +57,22 @@ export default function App() {
     // fetchVersi1();
     // fetchVersi2();
     // fetchDenganAxios();
-    fetchAxiosAyncAwait();
+    setTimeout(() => {
+      fetchAxiosAyncAwait();
+      setIsLoading(false);
+    },2000)
   }, []);
 
   return (
     <div>
-      <h1>MyBlog</h1>
-      <p>Welcome to my Blog</p>
-
+      <header>
+        <h1>MyBlog</h1>
+      </header>
+        <p>Welcome to my Blog</p>
       {isLoading ? (
         <div>🔃 Loading... </div>
       ) : (
-        <div>Salam dari Binjai</div>
+        <List data={posts} />
       )}
     </div>
   );

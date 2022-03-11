@@ -1,3 +1,131 @@
-h1, p {
-  font-family: Lato;
+body {
+  background-color: #eeedde;
+}
+
+header {
+  justify-content: space-between;
+  background-color: #789395;
+  color: white;
+  align-items: center;
+  text-align:center;
+  padding: 16px;
+}
+
+#brand {
+  font-weight: bold;
+  font-size: 24px;
+  background-color: #5d7577;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+header li {
+  margin-left: 16px;
+  transition: all 0.5s 0s ease;
+}
+header li:hover {
+  transform: scale(1.2);
+  /* transform: skewX(10deg); */
+}
+
+header li a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 16px;
+  font-size: 18px;
+  transition: all 0.5s 0s ease;
+  border-radius: 8px;
+}
+
+header li a:hover {
+  background-color: white;
+  color: #789395;
+}
+
+.searchForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+input {
+  padding: 16px 8px;
+  border-radius: 8px;
+  border: 2px solid gray;
+  margin-bottom: 16px;
+}
+
+.btn-primary {
+  border: 0;
+  padding: 16px;
+  background-color: #111;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background: #fff;
+  border:1px solid black;
+  color:#111;
+}
+
+.btn-secondary {
+  border: 0;
+  padding: 16px;
+  background-color: lightgray;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.list-item {
+  background-color: white;
+  width: 250px;
+
+  padding: 16px;
+  box-shadow: 10px 10px 9px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+
+  margin: 16px;
+}
+
+.list-item img {
+  width: 100px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 8px;
+}
+.list-item h4 {
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.list-item a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px;
+  width: 80px;
+  text-align: center;
 }
