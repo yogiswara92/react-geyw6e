@@ -66,11 +66,19 @@ export default function App() {
   return (
     <div>
       <header>
-        <h1>MyBlog</h1>
+        <h1>MyContact</h1>
       </header>
-        <p>Welcome to my Blog</p>
+        <p>Welcome to MyContact</p>
       {isLoading ? (
-        <div>🔃 Loading... </div>
+        <>
+          <p>🔃 Loading... </p>
+          <div className="list">          
+            <div className="list-item"></div>
+            <div className="list-item"></div>
+            <div className="list-item"></div>
+            <div className="list-item"></div>
+          </div>
+        </>
       ) : (
         <List data={posts} />
       )}

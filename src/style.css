@@ -4,7 +4,7 @@ body {
 
 header {
   justify-content: space-between;
-  background-color: #789395;
+  background-color: #111;
   color: white;
   align-items: center;
   text-align:center;
@@ -95,12 +95,13 @@ input {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  
 }
 
 .list-item {
   background-color: white;
   width: 250px;
-
+  min-height:150px;
   padding: 16px;
   box-shadow: 10px 10px 9px -1px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
